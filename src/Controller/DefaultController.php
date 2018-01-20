@@ -9,6 +9,7 @@
 namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController
 {
@@ -19,13 +20,18 @@ class DefaultController
     }
     */
 
-    // Must return a symfony response object
+    /**
+     * @Route("/hello/{name}")
+     */
     public function index($name = 'Yooooo'){
-        return new response($name . '! You should go listen to This Way by Dilated People.');
+        return new Response($name . '! You should go listen to This Way by Dilated People.');
     }
 
-    public function anotherController(){
-        return new Response('Tryin\' to breath by Dilated People.');
+    /**
+     * @Route("/simple")
+     */
+    public function simple(){
+        return new Response('Great song: Tryin\' to breath by Dilated People.');
     }
 
 }
