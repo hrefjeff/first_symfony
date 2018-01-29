@@ -11,3 +11,18 @@
 ###> symfony/web-server-bundle ###
 .web-server-pid
 ###< symfony/web-server-bundle ###
+#
+/var/bootstrap.php.cache
+/var/cache/*
+/app/config/parameters.yml
+/var/logs/*
+!var/cache/.gitkeep
+!var/logs/.gitkeep
+/var/SymfonyRequirements.php
+/build/
+/vendor/
+/bin/
+/composer.phar
+/web/app_dev.php
+/web/bundles/
+/web/config.php
